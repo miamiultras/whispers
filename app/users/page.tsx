@@ -11,7 +11,7 @@ export default async function UsersPage() {
       <h1 className="text-2xl">Users</h1>
       <ul className="mt-6">
         {users.map((user: UserProps) => (
-          <li>{user.username}</li>
+          <li key={user._id}>{user.username}</li>
         ))}
       </ul>
     </div>

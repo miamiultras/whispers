@@ -1,10 +1,13 @@
 import clientPromise from "@/lib/mongodb";
 
 export interface UserProps {
+  _id: string;
   name: string;
   username: string;
   email: string;
   image: string;
+  followers: number;
+  emailVerified: boolean
 }
 
 export async function getUser(username: string): Promise<UserProps | null> {
