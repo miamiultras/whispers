@@ -11,16 +11,16 @@ function SignIn() {
       <button
         onClick={() => signIn("google")}
         type="button"
-        className="bg-white text-black p-4 border-black border-2 border-b-8 border-l-8 skew-x-4"
+        className="bg-white text-black p-4 border-black border-2 border-b-8 border-l-8"
       >
         Sign in with Google
       </button>
       <button
         onClick={() => {}}
         type="button"
-        className="bg-white text-black p-4 border-black border-2 border-b-8 border-l-8 skew-x-4"
+        className="bg-white text-black p-4 border-black border-2 border-b-8 border-l-8"
       >
-        Sign in with <span className="font-extrabold">Magic Link</span>
+        Continue without signing in
       </button>
     </div>
   );
