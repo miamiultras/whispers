@@ -1,20 +1,9 @@
-"use client";
-import { signOut } from "next-auth/react";
+import React from "react";
 
-interface CardProps {
-  userName: string;
-}
-
-function Card({ userName }: CardProps) {
+function Card({ children }: React.PropsWithChildren) {
   return (
-    <div className="bg-white flex flex-col p-8 rounded-lg">
-      <h2 className="text-xl text-black">Hello {userName}</h2>
-      <button
-        className="bg-black my-4 text-white p-3 rounded-lg"
-        onClick={() => signOut()}
-      >
-        Sign Out
-      </button>
+    <div className="bg-white p-8 border-2 border-black rounded-lg flex flex-col justify-between gap-6">
+      {children}
     </div>
   );
 }
