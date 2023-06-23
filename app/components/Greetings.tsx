@@ -14,7 +14,7 @@ function Greetings({ userName }: GreetingsProps) {
         choices:
       </h2>
       <Link
-        href="/story"
+        href="/game"
         className="bg-white text-black p-4 border-black border-2 border-b-8 border-l-8 text-center"
       >
         Enter the void
