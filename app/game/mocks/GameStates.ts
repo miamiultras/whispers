@@ -4,6 +4,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state1",
     text: "You wake up in a dark room, surrounded by whispers. You reach into your pockets and find a box of matches and an unknown pill. The voices tell you to take the pill.",
+    image: "matches_pill.webp",
     paths: [
       { id: "path1", text: "Lit up a match", next: "state2" },
       { id: "path2", text: "Take the pill", next: "state3" },
@@ -12,6 +13,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state2",
     text: 'You lit up a match and see a sign on the box of matches that says "You are the key." The match goes out, and you hear a voice urging you to burn the box of matches.',
+    image: "matches.webp",
     paths: [
       { id: "path3", text: "Burn the box of matches", next: "state4" },
       { id: "path4", text: "Take a look inside your pocket", next: "state5" },
