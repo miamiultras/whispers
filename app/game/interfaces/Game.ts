@@ -7,5 +7,6 @@ export interface Path {
 export interface GameState {
   id: string;
   text: string;
+  image?: string;
   paths: Path[];
 }
