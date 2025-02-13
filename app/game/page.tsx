@@ -3,7 +3,7 @@ import { gameStatesMock } from "./mocks/GameStates";
 
 function StoryPage() {
   return (
-    <section className="mt-10">
+    <section>
       <GameCard states={gameStatesMock} />
     </section>
   );

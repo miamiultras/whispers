@@ -38,7 +38,7 @@ function GameCard({ states }: GameCardProps) {
           />
         </div>
       )}
-      <div className="text-black text-sm md:text-base lg:text-lg transition-all duration-300 min-h-[80px]">
+      <div className="text-black text-sm md:text-base lg:text-base transition-all duration-300 min-h-[80px]">
         {currentState.text}
       </div>
 
@@ -48,9 +48,7 @@ function GameCard({ states }: GameCardProps) {
             key={path.id}
             onClick={() => handlePathSelected(path.next)}
             type="button"
-            className="w-full bg-white text-black p-3 md:p-4 text-sm md:text-base border-black border-2 border-b-8 border-l-8 
-                     hover:bg-gray-100 transition-colors duration-200 
-                     active:border-b-2 active:border-l-2 active:translate-y-1"
+            className="w-full bg-white text-black p-3 md:p-4 text-sm md:text-base border border-black border-[4px] tracking-widest shadow-[4px_4px_0px_0px_black] hover:bg-gray-200 transition-all duration-200 active:shadow-[2px_2px_0px_0px_black]"
           >
             {path.text}
           </button>
