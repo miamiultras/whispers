@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { GameState } from "../interfaces/Game";
 import Card from "@/app/components/Card";
-import TypewriterText from "./TypewriterText";
 import Image from "next/image";
 
 interface GameCardProps {
@@ -31,9 +30,7 @@ function GameCard({ states }: GameCardProps) {
             alt={`Scene for: ${currentState.text}`}
             fill
             priority
-            className={`object-cover pixel-image transition-opacity duration-300 ${
-              isTransitioning ? 'opacity-0' : 'opacity-100'
-            }`}
+            className={`object-cover pixel-image transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
             style={{ imageRendering: 'pixelated' }}
           />
         </div>

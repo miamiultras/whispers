@@ -23,7 +23,6 @@ export default function RootLayout({
         <body className={pixelFont.className}>
           <main className="min-h-screen min-w-full bg-gradient-to-br from-gray-800 to-black text-green-500 relative">
             <div className="absolute inset-0 pointer-events-none bg-[url('/images/pixel-pattern.png')] bg-repeat opacity-20"></div>
-            {/* Scanline effect overlay */}
             <div className="absolute inset-0 pointer-events-none bg-scanlines opacity-10"></div>
 
             <div className="relative flex flex-col items-center p-5 min-h-screen">
@@ -31,7 +30,6 @@ export default function RootLayout({
                 <h1 className="text-2xl uppercase glitch-text mb-8 mt-10">
                   whispers_
                 </h1>
-                {/* CRT monitor style container */}
                 <div className="relative border border-green-500/30 bg-black/90 p-4 rounded-lg shadow-[0_0_15px_rgba(34,197,94,0.2)]">
                   {children}
                 </div>
