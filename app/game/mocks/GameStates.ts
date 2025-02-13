@@ -22,6 +22,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state3",
     text: "You took the pill and the darkness slowly fades away. You hear more voices and see a door in front of you.",
+    image: "door.webp",
     paths: [
       { id: "path5", text: "Go through the door", next: "state10" },
       { id: "path6", text: "Vomit the pill", next: "state8" },
@@ -30,6 +31,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state4",
     text: "You burn the box of matches, and the room is once again filled with darkness. Panic sets in, and you start beating the walls.",
+    image: "panic.webp",
     paths: [{ id: "path7", text: "Eat the pill", next: "state3" }],
   },
   {
@@ -79,6 +81,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state10",
     text: `You went through the door and wake up in your house. Memories flood back, and you recall your inner struggle. You prepare breakfast, but instead of food, there's a familiar pill on the plate.`,
+    image: "breakfast.webp",
     paths: [
       { id: "path18", text: "Eat the pill", next: "state1" },
       {
