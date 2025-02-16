@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GameState } from "../interfaces/Game";
 import Card from "@/app/components/Card";
 import Image from "next/image";
@@ -11,14 +11,29 @@ interface GameCardProps {
 function GameCard({ states }: GameCardProps) {
   const [currentState, setCurrentState] = useState(states[0]);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [nextStateId, setNextStateId] = useState<string | null>(null);
 
-  function handlePathSelected(nextStateId: string) {
-    setIsTransitioning(true);
-    const nextGameState = states.find((state) => state.id === nextStateId);
-    if (nextGameState) {
-      setCurrentState(nextGameState);
+  useEffect(() => {
+    if (nextStateId) {
+      const nextGameState = states.find((state) => state.id === nextStateId);
+      
+      const transitionTimeout = setTimeout(() => {
+        if (nextGameState) {
+          setCurrentState(nextGameState);
+        }
+        setTimeout(() => {
+          setIsTransitioning(false);
+          setNextStateId(null);
+        }, 300); // match this with your CSS transition duration
+      }, 300);
+
+      return () => clearTimeout(transitionTimeout);
     }
-    setIsTransitioning(false);
+  }, [nextStateId, states]);
+
+  function handlePathSelected(stateId: string) {
+    setIsTransitioning(true);
+    setNextStateId(stateId);
   }
   
   const isProd = process.env.NODE_ENV === 'production';
