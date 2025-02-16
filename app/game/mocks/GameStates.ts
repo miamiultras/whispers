@@ -37,6 +37,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state5",
     text: "You take a look inside your pocket and find an old key. You light another match and see wooden doors in front of you.",
+    image: "wooden_door.webp",
     paths: [
       { id: "path8", text: "Open the door", next: "state6" },
       {
@@ -49,6 +50,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state6",
     text: `You open the door, but behind it, there's only a concrete wall like the rest of the room. Feeling hopeless, you break the old door and make a pile of wood. You light it on fire using the last match and see a sign at the bottom of the box that says "Wake up." You throw the box into the fire.`,
+    image: "no_way.webp",
     paths: [
       { id: "path10", text: "Jump into the fire", next: "state7" },
       { id: "path11", text: "Eat the pill", next: "state3" },
@@ -57,6 +59,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state7",
     text: `You jump into the fire, and the room disappears. You find yourself falling through a black hole, feeling like it's never-ending. Eventually, you land and start losing consciousness. A voice urges you not to give up.`,
+    image: "blackhole.webp",
     paths: [
       { id: "path12", text: "Open your eyes", next: "state8" },
       { id: "path13", text: "Give up", next: "state1" },
@@ -65,6 +68,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state8",
     text: "You open your eyes and wake up in a garden, with the sun shining. You are covered in vomit and see half of the pill. You hear a voice telling you to eat the pill.",
+    image: "garden.webp",
     paths: [
       { id: "path14", text: "Throw away the pill", next: "state9" },
       { id: "path15", text: "Eat the pill", next: "state10" },
@@ -73,6 +77,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state9",
     text: "You throw away the pill and start crying. The sun disappears, and it starts raining heavily. The rain mixes with your tears, and you begin to drown in it.",
+    image: "rain.webp",
     paths: [
       { id: "path16", text: "Try to swim and stay alive", next: "state11" },
       { id: "path17", text: "Let the water consume you", next: "state1" },
@@ -94,6 +99,7 @@ export const gameStatesMock: GameState[] = [
   {
     id: "state11",
     text: 'The rain stops, and the water slowly recedes. Exhausted but relieved, you hear a voice saying, "Don\'t resist." A stranger appears before you, showing two hands—one with the familiar pill and another with a box of matches.',
+    image: "stranger.webp",
     paths: [
       { id: "path20", text: "Choose the pill", next: "state3" },
       { id: "path21", text: "Choose the box of matches", next: "state2" },
