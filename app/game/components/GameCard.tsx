@@ -21,6 +21,8 @@ function GameCard({ states }: GameCardProps) {
     setIsTransitioning(false);
   }
   
+  const isProd = process.env.NODE_ENV === 'production';
+
   return (
     <Card>
       {currentState.image && (
@@ -30,6 +32,10 @@ function GameCard({ states }: GameCardProps) {
             alt={`Scene for: ${currentState.text}`}
             fill
             priority
+            {...(isProd && {
+              placeholder: "blur",
+              blurDataURL: `/images/questions/${currentState.image}?lqip`
+            })}
             className={`object-cover pixel-image transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
             style={{ imageRendering: 'pixelated' }}
           />
