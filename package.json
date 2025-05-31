@@ -11,7 +11,7 @@
     "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
-    "@types/node": "^20.17.52",
+    "@types/node": "^20.17.57",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.4.21",
@@ -21,7 +21,7 @@
     "mongodb": "^5.9.2",
     "next": "^13.5.11",
     "next-auth": "^4.24.11",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sharp": "^0.33.5",
