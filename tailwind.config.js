@@ -12,7 +12,21 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      imageRendering: {
+        'pixelated': 'pixelated',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.pixel-image': {
+          'image-rendering': 'pixelated',
+          'width': '100%',
+          'height': '100%',
+          'object-fit': 'cover',
+        },
+      });
+    },
+  ],
 }
